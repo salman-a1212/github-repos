@@ -2,8 +2,7 @@
 
 // JavaScript program to demonstrate
 // working of LIFO
-
-
+var stack = [5, 4, 5, 4, 5, 3]
 // Pushing element on the top of the stack
 function stack_push(stack)
 {
@@ -16,10 +15,11 @@ function stack_push(stack)
 
 // Popping element from the top of the stack
 function stack_pop(stack)
+
 {
 	document.write( "Pop :<br>");
 
-	for (var i = 0; i < 5; i++)
+	for (var i = 0; stack.length < 5; i++)
 	{
 		var y = parseInt(stack[stack.length-1]);
 		stack.pop();
@@ -27,6 +27,7 @@ function stack_pop(stack)
 	}
 	return stack;
 }
+console.log(stack.length,"stl")
 
 // Displaying element on the top of the stack
 function stack_peek(stack)
@@ -35,7 +36,7 @@ function stack_peek(stack)
 	document.write( "Element on stack top : " + element +
 	"<br>");
 }
-
+console.log(stack_peek(),"calling stack peek")
 // Searching element in the stack
 function stack_search( stack, element)
 {
